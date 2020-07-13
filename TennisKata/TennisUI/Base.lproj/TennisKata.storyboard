@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bfs-Y7-2Zg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tennis Kata-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="TennisKataViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="TennisKataViewController" customModule="TennisKata" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tennis_home_bg" translatesAutoresizingMaskIntoConstraints="NO" id="40h-hf-hEo">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXe-ns-Bf9">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="WoB-Mz-ayG">
+                                        <rect key="frame" x="0.0" y="40" width="414" height="200"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="loc-BF-Tpa">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="DVA-wP-mCr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="200"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aG-yu-M6l">
+                                                                <rect key="frame" x="75.5" y="0.0" width="36" height="17.5"/>
+                                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVI-Ua-5MT">
+                                                                <rect key="frame" x="71.5" y="79" width="44.5" height="22"/>
+                                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVc-8m-yGW">
+                                                                <rect key="frame" x="27" y="162" width="133" height="38"/>
+                                                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                                <state key="normal" title="Score point 🎾 ">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="playerOneScoreTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="uJu-hz-6mr"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZS-1E-ekW">
+                                                        <rect key="frame" x="197" y="0.0" width="20" height="200"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="aVl-EM-Pr0"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="QW4-AE-Jl1">
+                                                        <rect key="frame" x="227" y="0.0" width="187" height="200"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfg-8E-zYg">
+                                                                <rect key="frame" x="75.5" y="0.0" width="36" height="17.5"/>
+                                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3O-fR-7W6">
+                                                                <rect key="frame" x="71.5" y="79" width="44.5" height="22"/>
+                                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6W-gA-bcb">
+                                                                <rect key="frame" x="27" y="162" width="133" height="38"/>
+                                                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                                <state key="normal" title="Score point 🎾 ">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="playerTwoScoreTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="JRc-bM-Lbv"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="BZS-1E-ekW" firstAttribute="centerX" secondItem="loc-BF-Tpa" secondAttribute="centerX" id="18o-wv-XJd"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WoB-Mz-ayG" secondAttribute="trailing" id="3gk-um-NLj"/>
+                                    <constraint firstAttribute="bottom" secondItem="WoB-Mz-ayG" secondAttribute="bottom" id="GXn-Ff-KXq"/>
+                                    <constraint firstItem="WoB-Mz-ayG" firstAttribute="width" secondItem="VXe-ns-Bf9" secondAttribute="width" id="Kgl-Ds-z39"/>
+                                    <constraint firstItem="WoB-Mz-ayG" firstAttribute="leading" secondItem="VXe-ns-Bf9" secondAttribute="leading" id="W6J-zJ-YKH"/>
+                                    <constraint firstItem="WoB-Mz-ayG" firstAttribute="top" secondItem="VXe-ns-Bf9" secondAttribute="top" constant="40" id="zvv-XY-NDm"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VXe-ns-Bf9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8FS-SE-aI7"/>
+                            <constraint firstItem="40h-hf-hEo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DGk-gh-BXQ"/>
+                            <constraint firstItem="VXe-ns-Bf9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IL5-Ob-MDt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="40h-hf-hEo" secondAttribute="trailing" id="bkv-Wo-UdE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VXe-ns-Bf9" secondAttribute="trailing" id="bxs-ug-5zD"/>
+                            <constraint firstItem="40h-hf-hEo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hyR-2M-Y4I"/>
+                            <constraint firstAttribute="bottom" secondItem="40h-hf-hEo" secondAttribute="bottom" id="jZC-9G-ASe"/>
+                            <constraint firstAttribute="bottom" secondItem="VXe-ns-Bf9" secondAttribute="bottom" id="sxG-nA-E84"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tennis Kata" id="rVY-vQ-vff">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="4rv-JR-UHI">
+                            <connections>
+                                <action selector="didTapCancel" destination="BYZ-38-t0r" id="gwt-xs-FDm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="playerOneNameLabel" destination="1aG-yu-M6l" id="kSI-1n-vbY"/>
+                        <outlet property="playerOneScoreButton" destination="AVc-8m-yGW" id="s3F-GH-sJy"/>
+                        <outlet property="playerOneScoreLabel" destination="BVI-Ua-5MT" id="KqT-5F-oui"/>
+                        <outlet property="playerTwoNameLabel" destination="vfg-8E-zYg" id="CKX-QV-hHI"/>
+                        <outlet property="playerTwoScoreButton" destination="I6W-gA-bcb" id="TsX-W2-bov"/>
+                        <outlet property="playerTwoScoreLabel" destination="u3O-fR-7W6" id="Nzs-sp-cSu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dah-m5-rw5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XBe-r5-51y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="myY-MK-B12">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="j1a-fx-paU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRy-Fv-Lix" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="830" y="138"/>
+        </scene>
+        <!--Tennis - Start game-->
+        <scene sceneID="5Ek-tt-5BP">
+            <objects>
+                <viewController id="PEG-vP-kg8" customClass="TennisLandingViewController" customModule="TennisKata" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a2O-M0-ZYH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pJI-Ep-EeM">
+                                <rect key="frame" x="10" y="410" width="394" height="130.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set count -" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTs-hd-f7g">
+                                        <rect key="frame" x="140" y="0.0" width="114.5" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" value="1" minimumValue="1" maximumValue="9" translatesAutoresizingMaskIntoConstraints="NO" id="4yv-n6-sRM">
+                                        <rect key="frame" x="150" y="47.5" width="94" height="32"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="countChanged:" destination="PEG-vP-kg8" eventType="valueChanged" id="TW4-dg-w1b"/>
+                                        </connections>
+                                    </stepper>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvH-na-JvW">
+                                        <rect key="frame" x="158" y="99.5" width="78" height="31"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                        <state key="normal" title="Start game">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapStartGame:" destination="PEG-vP-kg8" eventType="touchUpInside" id="eGL-AR-ZqJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pJI-Ep-EeM" firstAttribute="leading" secondItem="fhs-uh-hGv" secondAttribute="leading" constant="10" id="7bn-Cc-yLE"/>
+                            <constraint firstItem="pJI-Ep-EeM" firstAttribute="centerX" secondItem="fhs-uh-hGv" secondAttribute="centerX" id="E5Y-87-LjC"/>
+                            <constraint firstItem="fhs-uh-hGv" firstAttribute="trailing" secondItem="pJI-Ep-EeM" secondAttribute="trailing" constant="10" id="Fgg-Ej-j6V"/>
+                            <constraint firstItem="pJI-Ep-EeM" firstAttribute="centerY" secondItem="fhs-uh-hGv" secondAttribute="centerY" id="Gue-6v-bww"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fhs-uh-hGv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tennis - Start game" id="tX1-c9-sZk"/>
+                    <connections>
+                        <outlet property="countLabel" destination="vTs-hd-f7g" id="mYc-9e-tdX"/>
+                        <outlet property="countStepper" destination="4yv-n6-sRM" id="vPU-bj-pdZ"/>
+                        <outlet property="startGameButton" destination="zvH-na-JvW" id="wfV-vC-IyD"/>
+                        <segue destination="XBe-r5-51y" kind="presentation" identifier="TennisKata" modalPresentationStyle="fullScreen" id="eQq-2H-8Oo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pFp-9m-O2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-418.84057971014494" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qpm-GK-oKI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bfs-Y7-2Zg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="BiD-c6-qPF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PEG-vP-kg8" kind="relationship" relationship="rootViewController" id="asR-dD-YqH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FuZ-el-Sx1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1328.985507246377" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tennis_home_bg" width="414" height="896"/>
+    </resources>
+</document>

@@ -44,6 +44,7 @@ class TennisKataManager: TennisKataManagerProtocol {
     }
 }
 
+// MARK: - Private methods
 private extension TennisKataManager {
     func increaseScore(activePlayer: Player, inactivePlayer: Player) {
         switch activePlayer.score {
@@ -78,7 +79,9 @@ private extension TennisKataManager {
         guard newResult == .wonSet else {
             return
         }
+        
         player.setsWon += 1
+        
         if currentSet < setCount {
             startNewSet()
             result = .wonSet
@@ -92,6 +95,7 @@ private extension TennisKataManager {
             result = .draw
             return
         }
+        
         let winner = playerOne.setsWon > playerTwo.setsWon ? playerOne : playerTwo
         winner.result = .wonMatch
         result = .wonMatch
@@ -99,6 +103,7 @@ private extension TennisKataManager {
 
     func startNewSet() {
         currentSet += 1
+        
         playerOne.resetForGame()
         playerTwo.resetForGame()
     }
