@@ -2,6 +2,7 @@
 
 TennisKata is a simple app to showcase the wii tennis logic implementation.
 
+gif - ![alt-text](https://github.com/2020-DEV-096/Tennis/blob/master/Tennis%20Kata.gif)
 
 ## Scoring
 1 Game = 1 Set
